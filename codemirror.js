@@ -5,12 +5,9 @@
 // at http://marijnhaverbeke.nl/blog/#cm-internals .
 
 (function(mod) {
-  if (typeof exports == "object" && typeof module == "object") // CommonJS
-    module.exports = mod();
-  else if (typeof define == "function" && define.amd) // AMD
+  if (typeof define == "function" && define.amd){
     return define([], mod);
-  else // Plain browser env
-    this.CodeMirror = mod();
+  }
 })(function() {
   "use strict";
 
